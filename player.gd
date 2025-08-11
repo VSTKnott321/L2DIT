@@ -408,3 +408,4 @@ func add_ammo(amount: int) -> void:
 	ammo_label.text = "Ammo: " + str(ammo)  # Update the UI
 
 
+#definitely changing a whole lotta mycode for aimin here.
