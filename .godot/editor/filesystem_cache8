@@ -1,12 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1754860037
+::res://::1755569028
 128301__xenonn__layered-gunshot-9.wav::AudioStreamWAV::1151511808313854002::1741668843::1753929829::1::::<><>::
 161475__peteguy__loud-gunshot.wav::AudioStreamWAV::171040335891180290::1741679073::1753929829::1::::<><>::
 515223__joseignaciotriay__shotgun-12-gage-winchester-pump-shotgun-single-shot.wav::AudioStreamWAV::122537835427703422::1741668960::1753929829::1::::<><>::
 653032__bbbbilly__pickup_ammo.wav::AudioStreamWAV::8370724392550398892::1748663135::1753929829::1::::<><>::
 ammo_pickup.gd::GDScript::-1::1748663269::0::1::::<>Node3D<>::
 ammo_pickup.tscn::PackedScene::3288553560685839852::1750907647::0::1::::<><>::res://ammo_pickup.gd<>res://653032__bbbbilly__pickup_ammo.wav
-barrel.tscn::PackedScene::6874038310099073097::1754355487::0::1::::<><>::res://CharacterBody3D.gd<>uid://c3dq7mk1bibgk::::res://barrel/textures/Material.001_baseColor.png<>uid://b03n5luy8sxwe::::res://lo-fi-explosion-fx_A_minor.wav
+barrel.tscn::PackedScene::6874038310099073097::1754860151::0::1::::<><>::res://CharacterBody3D.gd<>uid://c3dq7mk1bibgk::::res://barrel/textures/Material.001_baseColor.png<>uid://b03n5luy8sxwe::::res://lo-fi-explosion-fx_A_minor.wav
 BigAmmo.tscn::PackedScene::6398643041604310970::1750907659::0::1::::<><>::uid://bm3885fspc4lc
 bullet_trail.gd::GDScript::-1::1741655099::0::1::::<>MeshInstance3D<>::
 bullet_trail.tscn::PackedScene::2540007809478223416::1742340861::0::1::::<><>::res://bullet_trail.gd
@@ -14,7 +14,7 @@ CharacterBody3D.gd::GDScript::-1::1753930074::0::1::::<>CharacterBody3D<>::
 default_bus_layout.tres::AudioBusLayout::4485065596411026657::1741476329::0::1::::<><>::
 Demon.png::CompressedTexture2D::7816690469108713671::1743748383::1753929823::1::::<><>::
 enemy.gd::GDScript::-1::1750626193::0::1::::<>CharacterBody3D<>::
-enemy.tscn::PackedScene::841961880536449573::1754355488::0::1::::<><>::res://enemy.gd<>uid://cvmg85qnfyo5h::::res://textures/drone-sprite.png
+enemy.tscn::PackedScene::841961880536449573::1754860151::0::1::::<><>::res://enemy.gd<>uid://cvmg85qnfyo5h::::res://textures/drone-sprite.png
 explosion-307469.mp3::AudioStreamMP3::1026679264416324299::1742358044::1753929822::1::::<><>::
 explosiondmg.gd::GDScript::-1::1750812893::0::1::::<>Node3D<>::
 explosiondmg.tscn::PackedScene::2510433952306692765::1750907652::0::1::::<><>::res://explosiondmg.gd
@@ -38,7 +38,7 @@ ManInTheBox.wav::AudioStreamWAV::2173499548126546517::1741897551::1753929830::1:
 Paranoid.wav::AudioStreamWAV::766922978194957906::1741897307::1753929829::1::::<><>::
 Plasmagun.png::CompressedTexture2D::3693180353915631239::1743110531::1753929823::1::::<><>::
 player.gd::GDScript::-1::1754355467::0::1::::<>CharacterBody3D<>::
-player.tscn::PackedScene::5101538758951927357::1754355487::0::1::::<><>::res://player.gd<>uid://ci7mpqvqe7no1::::res://textures/PlasmaPistol.png<>uid://osruljq26a5r::::res://textures/354049__pauldihor__gun-fire-for-futuristic-game.wav<>uid://ddw4yimc04ke0::::res://textures/SSGSprite.png<>uid://btcolokjffrcg::::res://textures/Revlolver-Anim.png<>uid://cy1pyw04je8yg::::res://textures/blkick.png<>uid://co4ak2hfctje::::res://161475__peteguy__loud-gunshot.wav<>uid://cigdga61dae0n::::res://pngkey.com-doomguy-face-png-5856859.png<>uid://qn2h4k37jues::::res://128301__xenonn__layered-gunshot-9.wav<>uid://be5s8j6yl0iy3::::res://mac-11.png<>uid://tqxx2xsd0nwj::::res://lasergun-sprite.png<>uid://bsvae126bks68::::res://Plasmagun.png<>uid://i244yhklfbjg::::res://textures/gaussrifle.png<>uid://bkgxpb48hhxcm::::res://textures/heavypistol.png<>uid://k6rdyp64iamk::::res://Paranoid.wav
+player.tscn::PackedScene::5101538758951927357::1754860151::0::1::::<><>::res://player.gd<>uid://ci7mpqvqe7no1::::res://textures/PlasmaPistol.png<>uid://osruljq26a5r::::res://textures/354049__pauldihor__gun-fire-for-futuristic-game.wav<>uid://ddw4yimc04ke0::::res://textures/SSGSprite.png<>uid://btcolokjffrcg::::res://textures/Revlolver-Anim.png<>uid://cy1pyw04je8yg::::res://textures/blkick.png<>uid://co4ak2hfctje::::res://161475__peteguy__loud-gunshot.wav<>uid://cigdga61dae0n::::res://pngkey.com-doomguy-face-png-5856859.png<>uid://qn2h4k37jues::::res://128301__xenonn__layered-gunshot-9.wav<>uid://be5s8j6yl0iy3::::res://mac-11.png<>uid://tqxx2xsd0nwj::::res://lasergun-sprite.png<>uid://bsvae126bks68::::res://Plasmagun.png<>uid://i244yhklfbjg::::res://textures/gaussrifle.png<>uid://bkgxpb48hhxcm::::res://textures/heavypistol.png<>uid://k6rdyp64iamk::::res://Paranoid.wav
 pngkey.com-doomguy-face-png-5856859.png::CompressedTexture2D::5346931297830821023::1742359342::1753929823::1::::<><>::
 portal1.gd::GDScript::-1::1750280883::0::1::::<>Node3D<>::
 portal1.tscn::PackedScene::7566702344487558719::1750907658::0::1::::<><>::res://portal1.gd<>res://textures/dirtgroundTexture.png
@@ -58,7 +58,7 @@ shotgun_blast.gd::GDScript::-1::1742859953::0::1::::bullet_ssg<>Node3D<>::
 shotgun_blast.tscn::PackedScene::2786273134991285771::1750907653::0::1::::<><>::res://shotgun_blast.gd
 SMG_Bullet.tscn::PackedScene::6858524347103947963::1741650668::0::1::::<><>::
 world.gd::GDScript::-1::1742435420::0::1::::<>Node3D<>::
-world.tscn::PackedScene::6182735684378215931::1754355487::0::1::::<><>::res://world.gd<>uid://cexhulkobk6xt::::res://player.tscn<>uid://l838vp7qbvlt::::res://enemy.tscn<>uid://bm3885fspc4lc::::res://ammo_pickup.tscn<>uid://drgc0yonlx65i::::res://rock.tscn<>uid://df2mqnkv20ae6::::res://portal1.tscn<>uid://cfxxbxs3208or::::res://rock_2.tscn<>uid://cxfsyl0knv7jq::::res://BigAmmo.tscn<>uid://c463n3djoaidd::::res://barrel.tscn
+world.tscn::PackedScene::6182735684378215931::1754860151::0::1::::<><>::res://world.gd<>uid://cexhulkobk6xt::::res://player.tscn<>uid://l838vp7qbvlt::::res://enemy.tscn<>uid://bm3885fspc4lc::::res://ammo_pickup.tscn<>uid://drgc0yonlx65i::::res://rock.tscn<>uid://df2mqnkv20ae6::::res://portal1.tscn<>uid://cfxxbxs3208or::::res://rock_2.tscn<>uid://cxfsyl0knv7jq::::res://BigAmmo.tscn<>uid://c463n3djoaidd::::res://barrel.tscn
 world_2.tscn::PackedScene::1354198859755248719::1750907659::0::1::::<><>::uid://cexhulkobk6xt
 ::res://barrel/::1753929831
 license.txt::TextFile::-1::1750718391::0::1::::<><>::
