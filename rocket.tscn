@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://b1ywhtbdq10g4"]
 
 [ext_resource type="Script" path="res://rocket.gd" id="1_v3dxf"]
-[ext_resource type="AudioStream" path="res://lo-fi-explosion-fx_A_minor.wav" id="2_fve0g"]
+[ext_resource type="AudioStream" uid="uid://b03n5luy8sxwe" path="res://sounds/lo-fi-explosion-fx_A_minor.wav" id="2_fve0g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4psp"]
 albedo_color = Color(0.337255, 0.337255, 0.337255, 1)

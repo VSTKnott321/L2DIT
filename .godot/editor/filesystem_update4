@@ -1,4 +1,6 @@
+res://tree.tscn
 res://world.tscn
 res://barrel.tscn
 res://player.tscn
 res://enemy.tscn
+res://light.tscn

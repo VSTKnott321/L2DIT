@@ -1,0 +1,461 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 185,
+      "max": [
+        0.5988507270812988,
+        7.390598773956299,
+        0.1964639276266098
+      ],
+      "min": [
+        -0.11834190785884857,
+        -7.509145736694336,
+        -0.1964639276266098
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 2220,
+      "componentType": 5126,
+      "count": 185,
+      "max": [
+        0.9868636727333069,
+        0.9999681115150452,
+        0.933681845664978
+      ],
+      "min": [
+        -0.9867846965789795,
+        -0.9985670447349548,
+        -0.9319900870323181
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 185,
+      "max": [
+        0.9999653697013855,
+        0.9518125653266907,
+        0.9876523017883301,
+        1.0
+      ],
+      "min": [
+        -0.9985670447349548,
+        -0.9546419978141785,
+        -0.9869170784950256,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 185,
+      "max": [
+        0.1695030927658081,
+        0.990340530872345
+      ],
+      "min": [
+        0.014450818300247192,
+        0.009841591119766235
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1480,
+      "componentType": 5126,
+      "count": 185,
+      "max": [
+        0.1695030927658081,
+        0.990340530872345
+      ],
+      "min": [
+        0.014450818300247192,
+        0.009841591119766235
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 882,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 4440,
+      "componentType": 5126,
+      "count": 1170,
+      "max": [
+        244.8915252685547,
+        818.8555908203125,
+        205.92222595214844
+      ],
+      "min": [
+        -143.80186462402344,
+        405.1856689453125,
+        -186.18798828125
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 18480,
+      "componentType": 5126,
+      "count": 1170,
+      "max": [
+        0.9673211574554443,
+        0.9998048543930054,
+        0.9966236352920532
+      ],
+      "min": [
+        -0.998530387878418,
+        -0.9988065958023071,
+        -0.989984929561615
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 2960,
+      "componentType": 5126,
+      "count": 1170,
+      "max": [
+        0.9928186535835266,
+        0.9997995495796204,
+        0.9758867025375366,
+        1.0
+      ],
+      "min": [
+        -0.9987727999687195,
+        -0.9718955755233765,
+        -0.9997104406356812,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 2960,
+      "componentType": 5126,
+      "count": 1170,
+      "max": [
+        0.9932467937469482,
+        0.9938670992851257
+      ],
+      "min": [
+        0.17766880989074707,
+        0.03939253091812134
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 12320,
+      "componentType": 5126,
+      "count": 1170,
+      "max": [
+        0.9932467937469482,
+        0.9938670992851257
+      ],
+      "min": [
+        0.17766880989074707,
+        0.03939253091812134
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 3528,
+      "componentType": 5125,
+      "count": 3900,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "JTMcDevitt (https://sketchfab.com/JTMcDevitt)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/low-poly-palm-tree-1b3fa8a0df7f4767a6b566aa0d36eaa6",
+      "title": "Low Poly Palm Tree"
+    },
+    "generator": "Sketchfab-13.74.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 19128,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 21680,
+      "byteOffset": 19128,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 32520,
+      "byteOffset": 40808,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 21680,
+      "byteOffset": 73328,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 95008,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/lambert2_baseColor.png"
+    },
+    {
+      "uri": "textures/lambert2_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/lambert2_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "alphaMode": "MASK",
+      "doubleSided": true,
+      "name": "lambert2",
+      "normalTexture": {
+        "index": 2
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Palm_Tree_Base_lambert2_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4
+          },
+          "indices": 5,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "group3_Leaf_28_lambert2_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 7,
+            "POSITION": 6,
+            "TANGENT": 8,
+            "TEXCOORD_0": 9,
+            "TEXCOORD_1": 10
+          },
+          "indices": 11,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "8e91893924964466837a1cca95172e1b.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        6
+      ],
+      "matrix": [
+        34.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        34.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        34.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "group1"
+    },
+    {
+      "children": [
+        5
+      ],
+      "matrix": [
+        2.6923532485961914,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.2325222492218018,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.6518923044204712,
+        0.0,
+        0.0,
+        9.225528717041016,
+        0.0,
+        1.0
+      ],
+      "name": "Palm_Tree_Base"
+    },
+    {
+      "mesh": 0,
+      "name": "Palm_Tree_Base_lambert2_0"
+    },
+    {
+      "children": [
+        7
+      ],
+      "matrix": [
+        0.029411764815449715,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.029411764815449715,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.029411764815449715,
+        0.0,
+        -1.4210854715202004e-14,
+        0.0,
+        3.552713678800501e-15,
+        1.0
+      ],
+      "name": "group3_Leaf_28"
+    },
+    {
+      "mesh": 1,
+      "name": "group3_Leaf_28_lambert2_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_o56xf"]
 [ext_resource type="Texture2D" uid="uid://c3dq7mk1bibgk" path="res://barrel/textures/Material.001_baseColor.png" id="2_r0s00"]
-[ext_resource type="AudioStream" uid="uid://b03n5luy8sxwe" path="res://lo-fi-explosion-fx_A_minor.wav" id="3_kb15h"]
+[ext_resource type="AudioStream" uid="uid://b03n5luy8sxwe" path="res://sounds/lo-fi-explosion-fx_A_minor.wav" id="3_l4ux6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uomsy"]
 resource_name = "Material.001"
@@ -140,4 +140,4 @@ process_material = SubResource("ParticleProcessMaterial_765nx")
 draw_pass_1 = SubResource("BoxMesh_q54ct")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("3_kb15h")
+stream = ExtResource("3_l4ux6")

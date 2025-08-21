@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://bm3885fspc4lc"]
 
 [ext_resource type="Script" path="res://ammo_pickup.gd" id="1_7it15"]
-[ext_resource type="AudioStream" path="res://653032__bbbbilly__pickup_ammo.wav" id="2_i7npp"]
+[ext_resource type="AudioStream" uid="uid://dri3uwtxe4sim" path="res://sounds/653032__bbbbilly__pickup_ammo.wav" id="2_i7npp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ugenk"]
 albedo_color = Color(0.670588, 0.466667, 0.239216, 1)
