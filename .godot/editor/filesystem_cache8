@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1755726036
+::res://::1756068512
 ammo_pickup.gd::GDScript::-1::1748663269::0::1::::<>Node3D<>::
-ammo_pickup.tscn::PackedScene::3288553560685839852::1755723920::0::1::::<><>::res://ammo_pickup.gd<>uid://dri3uwtxe4sim::::res://sounds/653032__bbbbilly__pickup_ammo.wav
-barrel.tscn::PackedScene::6874038310099073097::1755725937::0::1::::<><>::res://CharacterBody3D.gd<>uid://c3dq7mk1bibgk::::res://barrel/textures/Material.001_baseColor.png<>uid://b03n5luy8sxwe::::res://sounds/lo-fi-explosion-fx_A_minor.wav
+ammo_pickup.tscn::PackedScene::3288553560685839852::1755723920::0::1::::<><>::res://ammo_pickup.gd<>uid://dri3uwtxe4sim
+barrel.tscn::PackedScene::6874038310099073097::1755911980::0::1::::<><>::res://CharacterBody3D.gd<>uid://c3dq7mk1bibgk::::res://barrel/textures/Material.001_baseColor.png<>uid://b03n5luy8sxwe::::res://sounds/lo-fi-explosion-fx_A_minor.wav
 BigAmmo.tscn::PackedScene::6398643041604310970::1750907659::0::1::::<><>::uid://bm3885fspc4lc
 bullet_trail.gd::GDScript::-1::1741655099::0::1::::<>MeshInstance3D<>::
 bullet_trail.tscn::PackedScene::2540007809478223416::1742340861::0::1::::<><>::res://bullet_trail.gd
@@ -10,7 +10,7 @@ CharacterBody3D.gd::GDScript::-1::1753930074::0::1::::<>CharacterBody3D<>::
 default_bus_layout.tres::AudioBusLayout::4485065596411026657::1741476329::0::1::::<><>::
 Demon.png::CompressedTexture2D::7816690469108713671::1743748383::1753929823::1::::<><>::
 enemy.gd::GDScript::-1::1750626193::0::1::::<>CharacterBody3D<>::
-enemy.tscn::PackedScene::841961880536449573::1755725937::0::1::::<><>::res://enemy.gd<>uid://cvmg85qnfyo5h::::res://textures/drone-sprite.png
+enemy.tscn::PackedScene::841961880536449573::1755911980::0::1::::<><>::res://enemy.gd<>uid://cvmg85qnfyo5h::::res://textures/drone-sprite.png
 explosiondmg.gd::GDScript::-1::1750812893::0::1::::<>Node3D<>::
 explosiondmg.tscn::PackedScene::2510433952306692765::1750907652::0::1::::<><>::res://explosiondmg.gd
 GaussBolt.gd::GDScript::-1::1743019287::0::1::::<>Node3D<>::
@@ -24,13 +24,14 @@ lever-action.jpeg::CompressedTexture2D::4921670033396406849::1741572728::1753929
 levergun bullet.gd::GDScript::-1::1743841100::0::1::::bullet_L<>Node3D<>::
 levergun.png::CompressedTexture2D::1225818086011611448::1741668171::1753929823::1::::<><>::
 levergun_bullet.tscn::PackedScene::2002258092109143864::1750907654::0::1::::<><>::res://levergun bullet.gd
+light.tscn::PackedScene::996819811899967176::1755911980::0::1::::<><>::uid://dbq54odopftfb::::res://flashlight/scene.gltf
 mac-11.png::CompressedTexture2D::2730259749640912548::1742942574::1753929823::1::::<><>::
 malacaihorror.png::CompressedTexture2D::8857908677005373734::1741854087::1753929823::1::::<><>::
 MalaDed.png::CompressedTexture2D::7193067589305049572::1743029834::1753929823::1::::<><>::
 malcaideath.png::CompressedTexture2D::3414800886931485466::1741844427::1753929823::1::::<><>::
 Plasmagun.png::CompressedTexture2D::3693180353915631239::1743110531::1753929823::1::::<><>::
 player.gd::GDScript::-1::1754355467::0::1::::<>CharacterBody3D<>::
-player.tscn::PackedScene::5101538758951927357::1755725937::0::1::::<><>::res://player.gd<>uid://ci7mpqvqe7no1::::res://textures/PlasmaPistol.png<>uid://osruljq26a5r::::res://textures/354049__pauldihor__gun-fire-for-futuristic-game.wav<>uid://ddw4yimc04ke0::::res://textures/SSGSprite.png<>uid://btcolokjffrcg::::res://textures/Revlolver-Anim.png<>uid://cy1pyw04je8yg::::res://textures/blkick.png<>uid://cigdga61dae0n::::res://pngkey.com-doomguy-face-png-5856859.png<>uid://be5s8j6yl0iy3::::res://mac-11.png<>uid://tqxx2xsd0nwj::::res://lasergun-sprite.png<>uid://bsvae126bks68::::res://Plasmagun.png<>uid://i244yhklfbjg::::res://textures/gaussrifle.png<>uid://bkgxpb48hhxcm::::res://textures/heavypistol.png<>uid://co4ak2hfctje::::res://sounds/161475__peteguy__loud-gunshot.wav<>uid://qn2h4k37jues::::res://sounds/128301__xenonn__layered-gunshot-9.wav<>uid://k6rdyp64iamk::::res://sounds/Paranoid.wav
+player.tscn::PackedScene::5101538758951927357::1755911980::0::1::::<><>::res://player.gd<>uid://d1w0dsm4rkqow::::res://flashlight/textures/Scene_-_Root_baseColor.png<>uid://ci7mpqvqe7no1::::res://textures/PlasmaPistol.png<>uid://osruljq26a5r::::res://textures/354049__pauldihor__gun-fire-for-futuristic-game.wav<>uid://dc2t0bhbo3p50::::res://flashlight/textures/Scene_-_Root_metallicRoughness.png<>uid://ddw4yimc04ke0::::res://textures/SSGSprite.png<>uid://btcolokjffrcg::::res://textures/Revlolver-Anim.png<>uid://c38hojhsq7gkb::::res://flashlight/textures/Scene_-_Root_emissive.png<>uid://dn87tw36ekp0u::::res://flashlight/textures/Scene_-_Root_normal.png<>uid://cy1pyw04je8yg::::res://textures/blkick.png<>uid://cigdga61dae0n::::res://pngkey.com-doomguy-face-png-5856859.png<>uid://be5s8j6yl0iy3::::res://mac-11.png<>uid://tqxx2xsd0nwj::::res://lasergun-sprite.png<>uid://bsvae126bks68::::res://Plasmagun.png<>uid://i244yhklfbjg::::res://textures/gaussrifle.png<>uid://bkgxpb48hhxcm::::res://textures/heavypistol.png<>uid://co4ak2hfctje::::res://sounds/161475__peteguy__loud-gunshot.wav<>uid://qn2h4k37jues::::res://sounds/128301__xenonn__layered-gunshot-9.wav<>uid://k6rdyp64iamk::::res://sounds/Paranoid.wav
 pngkey.com-doomguy-face-png-5856859.png::CompressedTexture2D::5346931297830821023::1742359342::1753929823::1::::<><>::
 portal1.gd::GDScript::-1::1750280883::0::1::::<>Node3D<>::
 portal1.tscn::PackedScene::7566702344487558719::1750907658::0::1::::<><>::res://portal1.gd<>res://textures/dirtgroundTexture.png
@@ -40,7 +41,7 @@ README.md::TextFile::-1::1753837733::0::1::::<><>::
 Revolver-Anim.png::CompressedTexture2D::688522275703187324::1747861645::1753929824::1::::<><>::
 rock.tscn::PackedScene::8365026021077334024::1750907658::0::1::::<><>::res://rock_-_rock.glb
 rocket.gd::GDScript::-1::1749601202::0::1::::rocket<>Node3D<>::
-rocket.tscn::PackedScene::4262224958424769981::1755723920::0::1::::<><>::res://rocket.gd<>uid://b03n5luy8sxwe::::res://sounds/lo-fi-explosion-fx_A_minor.wav
+rocket.tscn::PackedScene::4262224958424769981::1755723920::0::1::::<><>::res://rocket.gd<>uid://b03n5luy8sxwe
 rock_2.tscn::PackedScene::5172665787700099433::1750907660::0::1::::<><>::res://western_stylised_rock/textures/lambert2_baseColor.png<>res://western_stylised_rock/textures/lambert2_metallicRoughness.png<>res://western_stylised_rock/textures/lambert2_normal.png
 rock_-_rock.glb::PackedScene::1321187698422333066::1748919580::1753929831::1::::<><>::uid://bs1bngm0hqk4c
 rock_-_rock_0.png::CompressedTexture2D::3703577957920403476::1748919580::1753929823::1::::<><>::
@@ -49,9 +50,9 @@ rock_-_rock_2.png::CompressedTexture2D::739296110497089703::1748919581::17539298
 shotgun_blast.gd::GDScript::-1::1742859953::0::1::::bullet_ssg<>Node3D<>::
 shotgun_blast.tscn::PackedScene::2786273134991285771::1750907653::0::1::::<><>::res://shotgun_blast.gd
 SMG_Bullet.tscn::PackedScene::6858524347103947963::1741650668::0::1::::<><>::
-tree.tscn::PackedScene::6428274543129546341::1755725937::0::1::::<><>::uid://cai22kb31lxoc::::res://low_poly_palm_tree/scene.gltf
+tree.tscn::PackedScene::6428274543129546341::1755911980::0::1::::<><>::uid://cai22kb31lxoc::::res://low_poly_palm_tree/scene.gltf
 world.gd::GDScript::-1::1742435420::0::1::::<>Node3D<>::
-world.tscn::PackedScene::6182735684378215931::1755725937::0::1::::<><>::res://world.gd<>uid://cexhulkobk6xt::::res://player.tscn<>uid://l838vp7qbvlt::::res://enemy.tscn<>uid://bm3885fspc4lc::::res://ammo_pickup.tscn<>uid://drgc0yonlx65i::::res://rock.tscn<>uid://df2mqnkv20ae6::::res://portal1.tscn<>uid://cfxxbxs3208or::::res://rock_2.tscn<>uid://cxfsyl0knv7jq::::res://BigAmmo.tscn<>uid://c463n3djoaidd::::res://barrel.tscn<>uid://cxt50im5rpucj::::res://tree.tscn
+world.tscn::PackedScene::6182735684378215931::1755911980::0::1::::<><>::res://world.gd<>uid://cexhulkobk6xt::::res://player.tscn<>uid://l838vp7qbvlt::::res://enemy.tscn<>uid://bm3885fspc4lc::::res://ammo_pickup.tscn<>uid://drgc0yonlx65i::::res://rock.tscn<>uid://df2mqnkv20ae6::::res://portal1.tscn<>uid://cfxxbxs3208or::::res://rock_2.tscn<>uid://cxfsyl0knv7jq::::res://BigAmmo.tscn<>uid://c463n3djoaidd::::res://barrel.tscn<>uid://cxt50im5rpucj::::res://tree.tscn
 world_2.tscn::PackedScene::1354198859755248719::1750907659::0::1::::<><>::uid://cexhulkobk6xt
 ::res://barrel/::1753929831
 license.txt::TextFile::-1::1750718391::0::1::::<><>::
@@ -86,10 +87,10 @@ Small_rock_2_normal.png::CompressedTexture2D::7123447365301304500::1750716388::1
 small_rock_baseColor.png::CompressedTexture2D::751753590160819273::1750716388::1753929824::1::::<><>::
 small_rock_metallicRoughness.png::CompressedTexture2D::6831050665147912262::1750716388::1753929824::1::::<><>::
 small_rock_normal.png::CompressedTexture2D::1496899184841109136::1750716388::1753929824::1::::<><>::
-::res://flashlight/::1755726037
+::res://flashlight/::1755726050
 license.txt::TextFile::-1::1755726036::0::1::::<><>::
-scene.gltf::PackedScene::7264354977206202767::1755726036::1755726037::1::::<><>::uid://d1w0dsm4rkqow::::res://flashlight/textures/Scene_-_Root_baseColor.png<>uid://dc2t0bhbo3p50::::res://flashlight/textures/Scene_-_Root_metallicRoughness.png<>uid://c38hojhsq7gkb::::res://flashlight/textures/Scene_-_Root_emissive.png<>uid://dn87tw36ekp0u::::res://flashlight/textures/Scene_-_Root_normal.png
-::res://flashlight/textures/::1755726037
+scene.gltf::PackedScene::7264354977206202767::1755726036::1755726050::1::::<><>::
+::res://flashlight/textures/::1755726038
 Scene_-_Root_baseColor.png::CompressedTexture2D::9031112543757049138::1755726036::1755726038::1::::<><>::
 Scene_-_Root_emissive.png::CompressedTexture2D::6806703959563381485::1755726036::1755726038::1::::<><>::
 Scene_-_Root_metallicRoughness.png::CompressedTexture2D::7356576268827411185::1755726036::1755726038::1::::<><>::

@@ -1,2 +1,5 @@
+DirectionalLight3D
+CSGSphere3D
+CSGBox3D
 SpotLight3D
 StaticBody3D

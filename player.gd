@@ -35,7 +35,7 @@ var SMGShot = false
 var RocketShot = false
 var  Macshot = false
 var GauShot = false
-
+var light_energy = 5.0
 
 #fire rate variables
 
@@ -124,9 +124,11 @@ func _physics_process(delta):
 
 
 
+
 	#handle shooting semi auto
 	if Input.is_action_just_pressed("shoot"):
 			shoot()
+			torch_increase()
 
 	#handle shooting full auto
 	if Input.is_action_pressed("shoot"):
@@ -378,7 +380,13 @@ func ShootAuto():
 		instance.transform.basis = raycast3d.global_transform.basis
 		get_parent().add_child(instance)
 
+# Get reference to your SpotLight3D node
+@onready var spotlight = $head/Camera3D/SpotLight3D 
 
+func torch_increase():
+	spotlight.light_energy = (light_energy * light_energy)
+	await get_tree().create_timer(0.5).timeout
+	spotlight.light_energy = (light_energy / light_energy)
 
 
 func kickdash():
