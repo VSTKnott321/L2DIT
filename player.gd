@@ -384,11 +384,20 @@ func ShootAuto():
 @onready var spotlight = $head/Camera3D/SpotLight3D 
 
 func torch_increase():
-	spotlight.light_energy = (light_energy * light_energy)
-	await get_tree().create_timer(0.5).timeout
-	spotlight.light_energy = (light_energy / light_energy)
-
-
+	var tween = create_tween()
+	tween.set_ease(Tween.EASE_IN_OUT)
+	tween.set_trans(Tween.TRANS_SINE)
+	
+	# Smoothly increase light energy
+	tween.tween_property(spotlight, "light_energy", light_energy + 5, 0.3)
+	await tween.finished
+	
+	# Smoothly decrease light energy
+	tween = create_tween()
+	tween.set_ease(Tween.EASE_IN_OUT)
+	tween.set_trans(Tween.TRANS_SINE)
+	tween.tween_property(spotlight, "light_energy", light_energy - 5, 0.3)
+	
 func kickdash():
 	$kick_timer.start()
 	speed = KICK_SPEED

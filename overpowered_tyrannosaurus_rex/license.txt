@@ -1,0 +1,11 @@
+Model Information:
+* title:	Overpowered Tyrannosaurus Rex
+* source:	https://sketchfab.com/3d-models/overpowered-tyrannosaurus-rex-f7d9bdf70d5f49afa6ac2eb5faf05c6e
+* author:	ArachnoBoy (https://sketchfab.com/vang807)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Overpowered Tyrannosaurus Rex" (https://sketchfab.com/3d-models/overpowered-tyrannosaurus-rex-f7d9bdf70d5f49afa6ac2eb5faf05c6e) by ArachnoBoy (https://sketchfab.com/vang807) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

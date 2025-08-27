@@ -24,7 +24,6 @@ background_mode = 1
 sky = SubResource("Sky_g77cv")
 tonemap_mode = 2
 glow_enabled = true
-volumetric_fog_enabled = true
 volumetric_fog_density = 0.01
 volumetric_fog_albedo = Color(0.741176, 0.894118, 0.996078, 1)
 volumetric_fog_emission = Color(0.196078, 0.196078, 0.196078, 1)

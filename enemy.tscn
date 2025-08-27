@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://l838vp7qbvlt"]
+[gd_scene load_steps=22 format=3 uid="uid://l838vp7qbvlt"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_7yh2g"]
 [ext_resource type="Texture2D" uid="uid://cvmg85qnfyo5h" path="res://textures/drone-sprite.png" id="2_aja55"]
+[ext_resource type="PackedScene" uid="uid://dw0wiv231bb63" path="res://overpowered_tyrannosaurus_rex/scene.gltf" id="3_f38no"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_21xd7"]
 atlas = ExtResource("2_aja55")
@@ -200,6 +201,7 @@ script = ExtResource("1_7yh2g")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(0.527156, 0, 0, 0, 0.499951, 0, 0, 0, 1, 0.0397482, 0.829377, 0)
+visible = false
 pixel_size = 0.04
 sprite_frames = SubResource("SpriteFrames_pw648")
 animation = &"die"
@@ -216,5 +218,8 @@ shape = SubResource("SphereShape3D_wfijj")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.0210404, 1.67297, 0, -1.01376, 0.0347222, 0, 0, 0, 1, -0.0158201, 0.61991, 0.00770617)
 shape = SubResource("SphereShape3D_svdah")
+
+[node name="scene" parent="." instance=ExtResource("3_f38no")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00445786, 0.298688, 0.394172)
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

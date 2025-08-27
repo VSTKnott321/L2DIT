@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@export var move_speed: float = 5.0
+@export var move_speed: float = 0
 @onready var player: CharacterBody3D = get_tree().get_first_node_in_group("player")
 
 # Gravity
