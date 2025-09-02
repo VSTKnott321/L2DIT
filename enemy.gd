@@ -1,11 +1,13 @@
 extends CharacterBody3D
 
-@export var move_speed: float = 0
+@export var move_speed: float = 2
+
 @onready var player: CharacterBody3D = get_tree().get_first_node_in_group("player")
 
 # Gravity
 @export var gravity: float = 9.8
 var falling_velocity: float = 0.0
+const ATTACK_RANGE = 20
 
 # Health
 @export var max_health: int = 100
@@ -14,6 +16,8 @@ var current_health: int
 # Knockback
 var knockback_velocity: Vector3 = Vector3.ZERO
 @export var knockback_decay: float = 5.0  # Higher = faster decay
+
+@onready var AnimTree = $scene/AnimationPlayer2/AnimationTree
 
 # Sprite Animation
 @onready var sprite: AnimatedSprite3D = $AnimatedSprite3D
@@ -41,6 +45,9 @@ func _physics_process(delta):
  # Gravity and knockback logic (keep your existing code here)
 	# ...
 
+
+
+
 	if player == null:
 		return
 
@@ -52,6 +59,12 @@ func _physics_process(delta):
 	
 	if player == null:
 		return
+		
+		
+	if move_speed <= 0:
+		AnimTree.set("parameters/conditions/idle", true)
+	if move_speed >= 0.1:
+		AnimTree.set("parameters/conditions/walk", true)
 	
 	# Movement direction (horizontal only)
 	var direction = (player.global_position - global_position).normalized()
@@ -61,10 +74,12 @@ func _physics_process(delta):
 	var horizontal_velocity = direction * move_speed + knockback_velocity
 	velocity = Vector3(horizontal_velocity.x, falling_velocity, horizontal_velocity.z)
 	
+
 	# Apply knockback decay
 	knockback_velocity = knockback_velocity.lerp(Vector3.ZERO, knockback_decay * delta)
 	
 	move_and_slide()
+
 
 	# Face movement direction (optional, if you want the sprite to rotate)
 	if direction.length() > 0.1:
@@ -129,3 +144,12 @@ func _on_area_3d_body_entered(body):
 	if body.has_method("get_damage"):
 		var damage = body.get_damage()
 		_hit(damage)
+
+
+#handle attack+ animation
+func _target_in_range():
+	return global_position.distance_to(player.global_position) < ATTACK_RANGE
+
+
+
+		#animtree.set("parameters/conditions/attack2", _target_in_range())

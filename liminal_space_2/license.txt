@@ -1,0 +1,11 @@
+Model Information:
+* title:	Liminal Space 2
+* source:	https://sketchfab.com/3d-models/liminal-space-2-6dcaf001c4364f1191cdd5001d72456d
+* author:	maath99 (https://sketchfab.com/maath99)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Liminal Space 2" (https://sketchfab.com/3d-models/liminal-space-2-6dcaf001c4364f1191cdd5001d72456d) by maath99 (https://sketchfab.com/maath99) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
