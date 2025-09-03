@@ -9049,7 +9049,7 @@ transform = Transform3D(4.02301, 0, 0, 0, 4.68143, 0, 0, 0, 3.73793, 0, -0.12784
 collision_layer = 3
 collision_mask = 7
 script = ExtResource("1_7yh2g")
-move_speed = 5.0
+move_speed = 2.08165e-12
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(0.527156, 0, 0, 0, 0.499951, 0, 0, 0, 1, 0.0397482, 0.829377, 0)

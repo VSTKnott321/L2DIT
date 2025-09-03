@@ -61,7 +61,7 @@ func _physics_process(delta):
 		return
 		
 		
-	if move_speed <= 0:
+	if move_speed == 0:
 		AnimTree.set("parameters/conditions/idle", true)
 	if move_speed >= 0.1:
 		AnimTree.set("parameters/conditions/walk", true)
