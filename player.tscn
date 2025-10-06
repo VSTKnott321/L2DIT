@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=3 uid="uid://cexhulkobk6xt"]
+[gd_scene load_steps=95 format=3 uid="uid://cexhulkobk6xt"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_1gtnb"]
 [ext_resource type="Texture2D" uid="uid://d1w0dsm4rkqow" path="res://flashlight/textures/Scene_-_Root_baseColor.png" id="2_ls6lc"]
@@ -10,9 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://c38hojhsq7gkb" path="res://flashlight/textures/Scene_-_Root_emissive.png" id="4_wg531"]
 [ext_resource type="Texture2D" uid="uid://dn87tw36ekp0u" path="res://flashlight/textures/Scene_-_Root_normal.png" id="5_igd5n"]
 [ext_resource type="Texture2D" uid="uid://cy1pyw04je8yg" path="res://textures/blkick.png" id="5_todvv"]
+[ext_resource type="PackedScene" uid="uid://daefwes5dqcos" path="res://textures/energy_rifle_-_weapon_design.glb" id="6_6a22p"]
 [ext_resource type="Texture2D" uid="uid://cigdga61dae0n" path="res://pngkey.com-doomguy-face-png-5856859.png" id="6_moiev"]
 [ext_resource type="Texture2D" uid="uid://be5s8j6yl0iy3" path="res://mac-11.png" id="7_fnbco"]
 [ext_resource type="Texture2D" uid="uid://tqxx2xsd0nwj" path="res://lasergun-sprite.png" id="7_t2kj1"]
+[ext_resource type="PackedScene" uid="uid://bhl5eggrwbm80" path="res://textures/lowpoly_shotgun.glb" id="7_xfxat"]
 [ext_resource type="Texture2D" uid="uid://bsvae126bks68" path="res://Plasmagun.png" id="9_8368p"]
 [ext_resource type="Texture2D" uid="uid://i244yhklfbjg" path="res://textures/gaussrifle.png" id="9_uioce"]
 [ext_resource type="Texture2D" uid="uid://bkgxpb48hhxcm" path="res://textures/heavypistol.png" id="11_512s8"]
@@ -69,6 +71,14 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_x0pyt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gkm5y"]
+transparency = 1
+albedo_color = Color(0.196078, 0.196078, 0.196078, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gin14"]
+material = SubResource("StandardMaterial3D_gkm5y")
+size = Vector3(0.1, 0.1, 0.1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f856x"]
 atlas = ExtResource("2_wuago")
@@ -634,7 +644,7 @@ transform = Transform3D(1, 0, 0.00137881, 0, 1, 0, -0.00137881, 0, 1, -0.0001660
 fov = 90.0
 
 [node name="AimRay" type="RayCast3D" parent="head/Camera3D"]
-transform = Transform3D(0.969284, 0, -1.03207e-09, 0, 0.969287, 0, -2.61104e-09, 0, 0.969284, -0.0167681, -0.00471735, -1.00881)
+transform = Transform3D(0.969284, 0, -1.04742e-09, 0, 0.969287, 0, -2.61103e-09, 0, 0.969284, 0.375347, -0.31835, -1.00756)
 target_position = Vector3(2.08165e-12, 2.08165e-12, -100)
 collision_mask = 3
 
@@ -642,9 +652,9 @@ collision_mask = 3
 transform = Transform3D(0.999995, 0, -0.0031765, 0, 1, 0, 0.0031765, 0, 0.999995, -0.582518, -0.432904, -0.544671)
 light_color = Color(1, 0.886275, 0.478431, 1)
 light_energy = 0.01
-light_volumetric_fog_energy = 2.131
-spot_range = 79.999
-spot_angle = 25.0
+light_indirect_energy = 0.0
+spot_range = 50.396
+spot_angle = 35.0
 
 [node name="flashlight__0" type="MeshInstance3D" parent="head/Camera3D"]
 transform = Transform3D(0.043819, 0.000110673, 0.000117204, -0.000139192, 4.25573e-06, 0.0369019, 0.000139175, -0.0348412, 4.87973e-06, -0.605128, -0.380667, -0.178507)
@@ -658,6 +668,34 @@ light_energy = 0.899
 light_volumetric_fog_energy = 0.0
 spot_range = 2.1
 spot_angle = 18.2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="head/Camera3D"]
+transform = Transform3D(1, 0, -3.35258e-10, 0, 1, 0, -9.46753e-10, 0, 1, 0.385469, -0.307458, -0.788868)
+mesh = SubResource("BoxMesh_gin14")
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="head/Camera3D/MeshInstance3D"]
+transform = Transform3D(-0.999895, -0.00704152, 0.0126646, 0.00189302, 0.803026, 0.595941, -0.0143663, 0.595903, -0.802928, -0.00276509, 0.765408, -1.36162)
+light_color = Color(1, 1, 0.72549, 1)
+light_energy = 0.899
+light_volumetric_fog_energy = 0.0
+spot_range = 2.1
+spot_angle = 18.2
+
+[node name="energy_rifle_-_weapon_design" parent="head/Camera3D/MeshInstance3D" instance=ExtResource("6_6a22p")]
+transform = Transform3D(0.000200948, 0, 0.0558866, 0, 0.0495935, 0, -0.0719598, 0, 0.000156064, -0.00916561, -0.109103, -0.549813)
+visible = false
+
+[node name="lowpoly_shotgun" parent="head/Camera3D/MeshInstance3D" instance=ExtResource("7_xfxat")]
+transform = Transform3D(-0.00493929, 0, -0.99999, 0, 1, 0, 0.99999, 0, -0.00493929, -0.00693303, -0.165035, -0.0274885)
+visible = false
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="head/Camera3D"]
+transform = Transform3D(0.999995, 0, -0.0031765, 0, 1, 0, 0.0031765, 0, 0.999995, -0.582518, -0.432904, -0.544671)
+light_color = Color(1, 0.886275, 0.478431, 1)
+light_energy = 0.1
+light_indirect_energy = 0.0
+spot_range = 80.0
+spot_angle = 5.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

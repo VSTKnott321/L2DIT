@@ -22,7 +22,7 @@ sky = SubResource("Sky_g77cv")
 tonemap_mode = 2
 glow_enabled = true
 volumetric_fog_density = 0.01
-volumetric_fog_albedo = Color(0.741176, 0.894118, 0.996078, 1)
+volumetric_fog_albedo = Color(0.882353, 0.894118, 0.996078, 1)
 volumetric_fog_emission = Color(0.196078, 0.196078, 0.196078, 1)
 volumetric_fog_emission_energy = 0.0
 volumetric_fog_length = 100.0
@@ -64,7 +64,7 @@ size = Vector3(200, 0.002, 200)
 material = SubResource("StandardMaterial3D_la5cl")
 
 [node name="enemy" parent="." instance=ExtResource("3_q03jk")]
-transform = Transform3D(7.04814, 0, 0, 0, 7.72193, 0, 0, 0, 7.11258, -14.9677, 0.846145, -57.3379)
+transform = Transform3D(7.04814, 0, 0, 0, 7.72193, 0, 0, 0, 7.11258, -14.9677, -2.26154, -57.3379)
 
 [node name="spawns" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.758, 0.702823, -85.7837)
@@ -131,5 +131,14 @@ material = SubResource("StandardMaterial3D_8627i")
 
 [node name="scene" parent="." instance=ExtResource("11_xfsl6")]
 transform = Transform3D(1.40526, 0, 0, 0, 8.32405, 0, 0, 0, 1.28356, -19.1256, -0.346472, 13.5871)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.000349089, 1, 0, -1, -0.000349089, 7.0383, 53.0049, -56.1768)
+light_color = Color(1, 0.984314, 0.392157, 1)
+light_energy = 8.434
+light_indirect_energy = 3.909
+light_volumetric_fog_energy = 2.535
+spot_range = 133.879
+spot_angle = 23.57
 
 [connection signal="timeout" from="Spawn_Timer" to="." method="_on_spawn_timer_timeout"]

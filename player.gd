@@ -47,6 +47,8 @@ var light_energy = 5.0
 
 @onready var raycast3d = $head/Camera3D/AimRay
 @onready var PPistol = $CanvasLayer/PPistolBase/PPistol
+@onready var dgun = $"head/Camera3D/MeshInstance3D/energy_rifle_-_weapon_design"
+@onready var Sgun = $head/Camera3D/MeshInstance3D/lowpoly_shotgun
 @onready var head = $head
 @onready var camera = $head/Camera3D
 @onready var SSGun = $CanvasLayer/SSGBase/SSG
@@ -129,6 +131,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("shoot"):
 			shoot()
 			torch_increase()
+			torch_increase2()
 
 	#handle shooting full auto
 	if Input.is_action_pressed("shoot"):
@@ -139,11 +142,12 @@ func _physics_process(delta):
 #equip pistol
 	if Input.is_action_just_pressed("equip1"):
 		$CanvasLayer/SMGBase.hide()
-		$CanvasLayer/SSGBase.hide()
-		$CanvasLayer/PPistolBase.show()
+		Sgun.hide()
+		$CanvasLayer/PPistolBase.hide()
 		$CanvasLayer/PGLBase.hide()
 		$CanvasLayer/macbase.hide()
 		$CanvasLayer/gaussbase.hide()
+		dgun.show()
 		PPistolShot = true
 		SSGunShot = false
 		SMGShot = false
@@ -154,11 +158,12 @@ func _physics_process(delta):
 #equip super shotgun
 	if Input.is_action_just_pressed("equip2"):
 		$CanvasLayer/SMGBase.hide()
-		$CanvasLayer/SSGBase.show()
+		Sgun.show()
 		$CanvasLayer/PPistolBase.hide()
 		$CanvasLayer/PGLBase.hide()
 		$CanvasLayer/macbase.hide()
 		$CanvasLayer/gaussbase.hide()
+		dgun.hide()
 		SSGunShot = true
 		PPistolShot = false
 		SMGShot = false
@@ -169,11 +174,12 @@ func _physics_process(delta):
 #equip lever action rifle
 	if Input.is_action_just_pressed("equip3"):
 		$CanvasLayer/SMGBase.show()
-		$CanvasLayer/SSGBase.hide()
+		Sgun.hide()
 		$CanvasLayer/PPistolBase.hide()
 		$CanvasLayer/PGLBase.hide()
 		$CanvasLayer/macbase.hide()
 		$CanvasLayer/gaussbase.hide()
+		dgun.hide()
 		SMGShot = true
 		SSGunShot = false
 		PPistolShot = false
@@ -184,11 +190,12 @@ func _physics_process(delta):
 #equip rocket gun
 	if Input.is_action_just_pressed("equip4"):
 		$CanvasLayer/SMGBase.hide()
-		$CanvasLayer/SSGBase.hide()
+		Sgun.hide()
 		$CanvasLayer/PPistolBase.hide()
 		$CanvasLayer/PGLBase.show() 
 		$CanvasLayer/macbase.hide()
 		$CanvasLayer/gaussbase.hide()
+		dgun.hide()
 		SMGShot = false
 		SSGunShot = false
 		PPistolShot = false
@@ -199,11 +206,12 @@ func _physics_process(delta):
 #equip mac-11
 	if Input.is_action_just_pressed("equip5"):
 		$CanvasLayer/SMGBase.hide()
-		$CanvasLayer/SSGBase.hide()
+		Sgun.hide()
 		$CanvasLayer/PPistolBase.hide()
 		$CanvasLayer/PGLBase.hide()
 		$CanvasLayer/macbase.show()
 		$CanvasLayer/gaussbase.hide()
+		dgun.hide()
 		SMGShot = false
 		SSGunShot = false
 		PPistolShot = false
@@ -216,11 +224,12 @@ func _physics_process(delta):
 #equip gauss gun
 	if Input.is_action_just_pressed("equip6"):
 		$CanvasLayer/SMGBase.hide()
-		$CanvasLayer/SSGBase.hide()
+		Sgun.hide()
 		$CanvasLayer/PPistolBase.hide()
 		$CanvasLayer/PGLBase.hide()
 		$CanvasLayer/macbase.hide()
 		$CanvasLayer/gaussbase.show()
+		dgun.hide()
 		SMGShot = false
 		SSGunShot = false
 		PPistolShot = false
@@ -230,12 +239,13 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("kick"):
 		$CanvasLayer/SMGBase.hide()
-		$CanvasLayer/SSGBase.hide()
+		Sgun.hide()
 		$CanvasLayer/PPistolBase.hide()
 		$CanvasLayer/PGLBase.hide()
 		$CanvasLayer/kickbase.show()
 		$CanvasLayer/macbase.hide()
 		$CanvasLayer/gaussbase.hide()
+		dgun.hide()
 		GauShot = false
 		SMGShot = false
 		SSGunShot = false
@@ -382,6 +392,7 @@ func ShootAuto():
 
 # Get reference to your SpotLight3D node
 @onready var spotlight = $head/Camera3D/SpotLight3D 
+@onready var spotlight2 = $head/Camera3D/SpotLight3D3
 
 func torch_increase():
 	var tween = create_tween()
@@ -397,6 +408,26 @@ func torch_increase():
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.set_trans(Tween.TRANS_SINE)
 	tween.tween_property(spotlight, "light_energy", light_energy - 5, 0.3)
+	
+	
+
+func torch_increase2():
+	var tween = create_tween()
+	tween.set_ease(Tween.EASE_IN_OUT)
+	tween.set_trans(Tween.TRANS_SINE)
+	
+	# Smoothly increase light energy
+	tween.tween_property(spotlight2, "light_energy", light_energy + 5, 0.3)
+	await tween.finished
+	
+	# Smoothly decrease light energy
+	tween = create_tween()
+	tween.set_ease(Tween.EASE_IN_OUT)
+	tween.set_trans(Tween.TRANS_SINE)
+	tween.tween_property(spotlight2, "light_energy", light_energy - 5, 0.3)
+
+
+
 	
 func kickdash():
 	$kick_timer.start()

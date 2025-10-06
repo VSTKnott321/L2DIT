@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@export var move_speed: float = 2
+@export var move_speed: float = 0
 
 @onready var player: CharacterBody3D = get_tree().get_first_node_in_group("player")
 
@@ -63,7 +63,7 @@ func _physics_process(delta):
 		
 	if move_speed == 0:
 		AnimTree.set("parameters/conditions/idle", true)
-	if move_speed >= 0.1:
+	if move_speed >= 0:
 		AnimTree.set("parameters/conditions/walk", true)
 	
 	# Movement direction (horizontal only)
@@ -131,9 +131,11 @@ func die():
 	move_speed = 0
 	set_physics_process(false)
 	sprite.play("die")
+	AnimTree.set("parameters/conditions/die", true)
 	print("Enemy has died")
 	await get_tree().create_timer(2.0).timeout
 	queue_free()
+	
 
 func apply_knockback(source_position: Vector3, strength: float):
 	var knockback_dir = (global_position - source_position).normalized()

@@ -1,9 +1,10 @@
-res://enemy.tscn
 res://world.tscn
 res://barrel.tscn
 res://player.tscn
+res://enemy.tscn
 res://tree.tscn
 res://light.tscn
 res://rex.tscn
 res://warehouse.tscn
 res://enemy.gd
+res://player.gd

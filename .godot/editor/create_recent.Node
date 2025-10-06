@@ -1,5 +1,7 @@
-Area3D
+AudioStreamPlayer3D
 SpotLight3D
+MeshInstance3D
+Area3D
 StaticBody3D
 AnimationTree
 DirectionalLight3D

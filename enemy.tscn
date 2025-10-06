@@ -1,8 +1,9 @@
-[gd_scene load_steps=42 format=3 uid="uid://l838vp7qbvlt"]
+[gd_scene load_steps=47 format=3 uid="uid://l838vp7qbvlt"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_7yh2g"]
 [ext_resource type="Texture2D" uid="uid://cvmg85qnfyo5h" path="res://textures/drone-sprite.png" id="2_aja55"]
 [ext_resource type="PackedScene" uid="uid://dw0wiv231bb63" path="res://overpowered_tyrannosaurus_rex/scene.gltf" id="3_f38no"]
+[ext_resource type="AudioStream" uid="uid://dijfguah5ltff" path="res://textures/trexbreathing.mp3" id="4_pesq4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_21xd7"]
 atlas = ExtResource("2_aja55")
@@ -9003,11 +9004,14 @@ _data = {
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uqfoo"]
 animation = &"Attack"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3lfnu"]
-animation = &"Idle2"
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_d14tj"]
+animation = &"Death"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7qs81"]
 animation = &"Walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3lfnu"]
+animation = &"Idle2"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ut6k5"]
 xfade_time = 0.25
@@ -9024,24 +9028,42 @@ xfade_time = 0.5
 switch_mode = 2
 advance_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_81gys"]
-xfade_time = 2.0
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_eoree"]
 advance_mode = 2
 advance_condition = &"idle"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lrk23"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_tsuc0"]
+xfade_time = 0.4
+switch_mode = 2
 advance_mode = 2
 advance_condition = &"walk"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gn38t"]
+xfade_time = 0.8
+advance_mode = 2
+advance_condition = &"die"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jkohi"]
+xfade_time = 0.5
+advance_mode = 2
+advance_condition = &"die"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_21msc"]
+xfade_time = 0.3
+advance_mode = 2
+advance_condition = &"die"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_jnerf"]
 states/Attack/node = SubResource("AnimationNodeAnimation_uqfoo")
-states/Attack/position = Vector2(561.293, 84.5)
-states/Idle2/node = SubResource("AnimationNodeAnimation_3lfnu")
-states/Idle2/position = Vector2(367.293, 31.5)
+states/Attack/position = Vector2(388.293, 229.5)
+states/Death/node = SubResource("AnimationNodeAnimation_d14tj")
+states/Death/position = Vector2(529.293, 120)
 states/Start/position = Vector2(187.5, 147)
 states/Walk/node = SubResource("AnimationNodeAnimation_7qs81")
 states/Walk/position = Vector2(357.293, 156.25)
-transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_ut6k5"), "Walk", "Attack", SubResource("AnimationNodeStateMachineTransition_jubqw"), "Attack", "Walk", SubResource("AnimationNodeStateMachineTransition_syh6y"), "Walk", "Idle2", SubResource("AnimationNodeStateMachineTransition_81gys"), "Idle2", "Walk", SubResource("AnimationNodeStateMachineTransition_lrk23")]
+states/idle/node = SubResource("AnimationNodeAnimation_3lfnu")
+states/idle/position = Vector2(317.293, 39.5)
+transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_ut6k5"), "Walk", "Attack", SubResource("AnimationNodeStateMachineTransition_jubqw"), "Attack", "Walk", SubResource("AnimationNodeStateMachineTransition_syh6y"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_eoree"), "idle", "Walk", SubResource("AnimationNodeStateMachineTransition_tsuc0"), "idle", "Death", SubResource("AnimationNodeStateMachineTransition_gn38t"), "Walk", "Death", SubResource("AnimationNodeStateMachineTransition_jkohi"), "Attack", "Death", SubResource("AnimationNodeStateMachineTransition_21msc")]
 graph_offset = Vector2(-60.2073, 0)
 
 [node name="enemy" type="CharacterBody3D"]
@@ -9049,7 +9071,6 @@ transform = Transform3D(4.02301, 0, 0, 0, 4.68143, 0, 0, 0, 3.73793, 0, -0.12784
 collision_layer = 3
 collision_mask = 7
 script = ExtResource("1_7yh2g")
-move_speed = 2.08165e-12
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(0.527156, 0, 0, 0, 0.499951, 0, 0, 0, 1, 0.0397482, 0.829377, 0)
@@ -9085,10 +9106,17 @@ tree_root = SubResource("AnimationNodeStateMachine_jnerf")
 anim_player = NodePath("..")
 active = true
 parameters/conditions/attack = false
+parameters/conditions/die = false
 parameters/conditions/idle = false
 parameters/conditions/walk = false
 
 [node name="Area3D" type="Area3D" parent="scene"]
 transform = Transform3D(1154.99, 0, 1.52958e-05, 0, 315.575, 0, 8.05663e-06, 0, 813.629, 0, 1.36709, 0)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.24857, 0, 0, 0, 0.21361, 0, 0, 0, 0.267528, 0, 1.03242, 0.754667)
+stream = ExtResource("4_pesq4")
+autoplay = true
+max_distance = 27.81
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
