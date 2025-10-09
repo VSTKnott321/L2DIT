@@ -49,11 +49,12 @@ var light_energy = 5.0
 @onready var PPistol = $CanvasLayer/PPistolBase/PPistol
 @onready var dgun = $"head/Camera3D/MeshInstance3D/energy_rifle_-_weapon_design"
 @onready var Sgun = $head/Camera3D/MeshInstance3D/lowpoly_shotgun
+@onready var Fgun = $head/Camera3D/MeshInstance3D/flare_gun_3d_model
 @onready var head = $head
 @onready var camera = $head/Camera3D
 @onready var SSGun = $CanvasLayer/SSGBase/SSG
 @onready var SMG = $CanvasLayer/SMGBase/smg
-@onready var smg_visible = $CanvasLayer/SMGBase
+@onready var Revlolver = $head/Camera3D/MeshInstance3D/ruger__357_cal_blackhawk
 @onready var kick = $CanvasLayer/kickbase/kick
 @onready var PGL = $CanvasLayer/PGLBase
 @onready var MAC = $CanvasLayer/macbase
@@ -130,6 +131,8 @@ func _physics_process(delta):
 	#handle shooting semi auto
 	if Input.is_action_just_pressed("shoot"):
 			shoot()
+	
+	if Input.is_action_just_pressed("RightClick"):
 			torch_increase()
 			torch_increase2()
 
@@ -141,10 +144,10 @@ func _physics_process(delta):
 
 #equip pistol
 	if Input.is_action_just_pressed("equip1"):
-		$CanvasLayer/SMGBase.hide()
+		Revlolver.hide()
 		Sgun.hide()
 		$CanvasLayer/PPistolBase.hide()
-		$CanvasLayer/PGLBase.hide()
+		Fgun.hide()
 		$CanvasLayer/macbase.hide()
 		$CanvasLayer/gaussbase.hide()
 		dgun.show()
@@ -157,10 +160,10 @@ func _physics_process(delta):
 
 #equip super shotgun
 	if Input.is_action_just_pressed("equip2"):
-		$CanvasLayer/SMGBase.hide()
+		Revlolver.hide()
 		Sgun.show()
 		$CanvasLayer/PPistolBase.hide()
-		$CanvasLayer/PGLBase.hide()
+		Fgun.hide()
 		$CanvasLayer/macbase.hide()
 		$CanvasLayer/gaussbase.hide()
 		dgun.hide()
@@ -173,10 +176,10 @@ func _physics_process(delta):
 
 #equip lever action rifle
 	if Input.is_action_just_pressed("equip3"):
-		$CanvasLayer/SMGBase.show()
+		Revlolver.show()
 		Sgun.hide()
 		$CanvasLayer/PPistolBase.hide()
-		$CanvasLayer/PGLBase.hide()
+		Fgun.hide()
 		$CanvasLayer/macbase.hide()
 		$CanvasLayer/gaussbase.hide()
 		dgun.hide()
@@ -189,10 +192,10 @@ func _physics_process(delta):
 
 #equip rocket gun
 	if Input.is_action_just_pressed("equip4"):
-		$CanvasLayer/SMGBase.hide()
+		Revlolver.hide()
 		Sgun.hide()
 		$CanvasLayer/PPistolBase.hide()
-		$CanvasLayer/PGLBase.show() 
+		Fgun.show() 
 		$CanvasLayer/macbase.hide()
 		$CanvasLayer/gaussbase.hide()
 		dgun.hide()
@@ -205,10 +208,10 @@ func _physics_process(delta):
 
 #equip mac-11
 	if Input.is_action_just_pressed("equip5"):
-		$CanvasLayer/SMGBase.hide()
+		Revlolver.hide()
 		Sgun.hide()
 		$CanvasLayer/PPistolBase.hide()
-		$CanvasLayer/PGLBase.hide()
+		Fgun.hide()
 		$CanvasLayer/macbase.show()
 		$CanvasLayer/gaussbase.hide()
 		dgun.hide()
@@ -223,10 +226,10 @@ func _physics_process(delta):
 		
 #equip gauss gun
 	if Input.is_action_just_pressed("equip6"):
-		$CanvasLayer/SMGBase.hide()
+		Revlolver.hide()
 		Sgun.hide()
 		$CanvasLayer/PPistolBase.hide()
-		$CanvasLayer/PGLBase.hide()
+		Fgun.hide()
 		$CanvasLayer/macbase.hide()
 		$CanvasLayer/gaussbase.show()
 		dgun.hide()
@@ -238,10 +241,10 @@ func _physics_process(delta):
 		GauShot = true
 
 	if Input.is_action_just_pressed("kick"):
-		$CanvasLayer/SMGBase.hide()
+		Revlolver.hide()
 		Sgun.hide()
 		$CanvasLayer/PPistolBase.hide()
-		$CanvasLayer/PGLBase.hide()
+		Fgun.hide()
 		$CanvasLayer/kickbase.show()
 		$CanvasLayer/macbase.hide()
 		$CanvasLayer/gaussbase.hide()

@@ -9055,7 +9055,7 @@ advance_condition = &"die"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_jnerf"]
 states/Attack/node = SubResource("AnimationNodeAnimation_uqfoo")
-states/Attack/position = Vector2(388.293, 229.5)
+states/Attack/position = Vector2(338.793, 228.5)
 states/Death/node = SubResource("AnimationNodeAnimation_d14tj")
 states/Death/position = Vector2(529.293, 120)
 states/Start/position = Vector2(187.5, 147)

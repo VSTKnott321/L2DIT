@@ -2,7 +2,7 @@ extends Node3D
 class_name rocket
 
 const SPEED = 30.0
-const GRAVITY = -9.8  # Adjust gravity strength
+const GRAVITY = -2  # Adjust gravity strength
 const ARCX = -20
 const ARCZ = 20
 

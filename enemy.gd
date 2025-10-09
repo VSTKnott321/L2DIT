@@ -133,7 +133,7 @@ func die():
 	sprite.play("die")
 	AnimTree.set("parameters/conditions/die", true)
 	print("Enemy has died")
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(5.0).timeout
 	queue_free()
 	
 
@@ -153,5 +153,4 @@ func _target_in_range():
 	return global_position.distance_to(player.global_position) < ATTACK_RANGE
 
 
-
-		#animtree.set("parameters/conditions/attack2", _target_in_range())
+	AnimTree.set("parameters/conditions/attack", _target_in_range())

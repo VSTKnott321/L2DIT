@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cuc70u7esoggh"]
+[gd_scene load_steps=16 format=3 uid="uid://cuc70u7esoggh"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_th1kp"]
 [ext_resource type="PackedScene" uid="uid://cexhulkobk6xt" path="res://player.tscn" id="2_pygwl"]
@@ -40,6 +40,17 @@ albedo_color = Color(0, 0.505882, 1, 1)
 emission_enabled = true
 emission = Color(0.909804, 0.870588, 0.513726, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jqt72"]
+emission_enabled = true
+emission = Color(0.92549, 0.87451, 0.129412, 1)
+emission_energy_multiplier = 13.48
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mwxm1"]
+albedo_color = Color(1, 1, 0.788235, 1)
+emission_enabled = true
+emission = Color(1, 0.760784, 0, 1)
+emission_energy_multiplier = 9.76
+
 [node name="world" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.865984, -0.0571923, -0.465454)
 script = ExtResource("1_th1kp")
@@ -65,6 +76,7 @@ material = SubResource("StandardMaterial3D_la5cl")
 
 [node name="enemy" parent="." instance=ExtResource("3_q03jk")]
 transform = Transform3D(7.04814, 0, 0, 0, 7.72193, 0, 0, 0, 7.11258, -14.9677, -2.26154, -57.3379)
+max_health = 1000
 
 [node name="spawns" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.758, 0.702823, -85.7837)
@@ -135,10 +147,30 @@ transform = Transform3D(1.40526, 0, 0, 0, 8.32405, 0, 0, 0, 1.28356, -19.1256, -
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.000349089, 1, 0, -1, -0.000349089, 7.0383, 53.0049, -56.1768)
 light_color = Color(1, 0.984314, 0.392157, 1)
+light_energy = 2.989
+light_indirect_energy = 3.909
+light_volumetric_fog_energy = 2.535
+spot_range = 133.879
+spot_angle = 23.57
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(0.229591, -0.000339764, 0.973287, -0.973287, -8.01477e-05, 0.229591, 0, -1, -0.000349089, 152.938, 4.09199, -55.9398)
+light_color = Color(1, 0.984314, 0.392157, 1)
 light_energy = 8.434
 light_indirect_energy = 3.909
 light_volumetric_fog_energy = 2.535
 spot_range = 133.879
 spot_angle = 23.57
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 144.512, 2.45918, -55.7969)
+size = Vector3(0.5, 2, 2)
+material = SubResource("StandardMaterial3D_jqt72")
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.12846, 75.3636, -56.9308)
+radius = 0.2
+rings = 3
+material = SubResource("StandardMaterial3D_mwxm1")
 
 [connection signal="timeout" from="Spawn_Timer" to="." method="_on_spawn_timer_timeout"]

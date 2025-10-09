@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b1ywhtbdq10g4"]
+[gd_scene load_steps=17 format=3 uid="uid://b1ywhtbdq10g4"]
 
 [ext_resource type="Script" path="res://rocket.gd" id="1_v3dxf"]
 [ext_resource type="AudioStream" uid="uid://b03n5luy8sxwe" path="res://sounds/lo-fi-explosion-fx_A_minor.wav" id="2_fve0g"]
@@ -6,17 +6,13 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4psp"]
 albedo_color = Color(0.337255, 0.337255, 0.337255, 1)
 metallic = 0.59
+emission_enabled = true
+emission = Color(1, 0.0235294, 0, 1)
+emission_energy_multiplier = 16.0
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_qdg12"]
 radius = 0.1
 height = 0.5
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jdkko"]
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_rcnwn"]
-top_radius = 0.1
-bottom_radius = 0.0
-height = 0.2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1vv6w"]
 albedo_color = Color(1, 0.411765, 0, 1)
@@ -29,8 +25,9 @@ size = Vector3(0.1, 0.1, 0.1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cktus"]
 transparency = 1
-albedo_color = Color(0, 0, 0, 1)
+albedo_color = Color(1, 0.239216, 0, 0.137255)
 emission_enabled = true
+emission = Color(1, 0.231373, 0, 1)
 emission_energy_multiplier = 16.0
 
 [sub_resource type="Gradient" id="Gradient_5w2fi"]
@@ -41,15 +38,21 @@ colors = PackedColorArray(1, 0.345098, 0, 1, 1, 0.564706, 0, 0)
 gradient = SubResource("Gradient_5w2fi")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1alaw"]
-direction = Vector3(2.08165e-12, 2.08165e-12, 0.1)
-spread = 0.0
-gravity = Vector3(2.08165e-12, -0.5, 2.08165e-12)
+direction = Vector3(2.08165e-12, 2.08165e-12, 5)
+spread = 86.7
+gravity = Vector3(2.08165e-12, 2.08165e-12, 2.08165e-12)
+initial_velocity_max = 0.2
+angular_velocity_min = 0.5
+angular_velocity_max = 0.7
+angle_min = 720.0
+angle_max = 720.0
+scale_max = 1.5
 color = Color(1, 0.364706, 0, 1)
 color_ramp = SubResource("GradientTexture1D_4hqud")
 
 [sub_resource type="SphereMesh" id="SphereMesh_qvym8"]
-radius = 0.04
-height = 0.08
+radius = 0.2
+height = 0.4
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ajmhm"]
 albedo_color = Color(1, 0.596078, 0, 1)
@@ -84,10 +87,10 @@ transform = Transform3D(0.998041, 0, 0, 0, -0.0112571, 1.01909, 0, -1.1856, -0.0
 material_override = SubResource("StandardMaterial3D_m4psp")
 mesh = SubResource("CapsuleMesh_qdg12")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.998041, 0, 0, 0, -0.00786293, -0.983261, 0, 1.18554, -0.00652133, 0, 0, -0.482262)
-material_override = SubResource("StandardMaterial3D_jdkko")
-mesh = SubResource("CylinderMesh_rcnwn")
+[node name="OmniLight3D" type="OmniLight3D" parent="MeshInstance3D"]
+light_color = Color(1, 0, 0, 1)
+light_energy = 9.0
+omni_range = 23.526
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.998041, 0, 0, 0, 0.998041, 0, 0, 0, 1.18549, 0, 0, 0.170439)
@@ -96,7 +99,9 @@ mesh = SubResource("BoxMesh_bmqxt")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 material_override = SubResource("StandardMaterial3D_cktus")
-amount = 10
+amount = 75
+lifetime = 9.63
+randomness = 0.92
 process_material = SubResource("ParticleProcessMaterial_1alaw")
 draw_pass_1 = SubResource("SphereMesh_qvym8")
 
