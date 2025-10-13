@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b1ywhtbdq10g4"]
+[gd_scene load_steps=19 format=3 uid="uid://b1ywhtbdq10g4"]
 
 [ext_resource type="Script" path="res://rocket.gd" id="1_v3dxf"]
 [ext_resource type="AudioStream" uid="uid://b03n5luy8sxwe" path="res://sounds/lo-fi-explosion-fx_A_minor.wav" id="2_fve0g"]
@@ -15,7 +15,8 @@ radius = 0.1
 height = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1vv6w"]
-albedo_color = Color(1, 0.411765, 0, 1)
+transparency = 1
+albedo_color = Color(1, 0.411765, 0, 0.309804)
 emission_enabled = true
 emission = Color(1, 0.345098, 0, 1)
 emission_energy_multiplier = 16.0
@@ -37,6 +38,13 @@ colors = PackedColorArray(1, 0.345098, 0, 1, 1, 0.564706, 0, 0)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_4hqud"]
 gradient = SubResource("Gradient_5w2fi")
 
+[sub_resource type="Curve" id="Curve_2j16w"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.408481, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_mio73"]
+curve = SubResource("Curve_2j16w")
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1alaw"]
 direction = Vector3(2.08165e-12, 2.08165e-12, 5)
 spread = 86.7
@@ -47,6 +55,7 @@ angular_velocity_max = 0.7
 angle_min = 720.0
 angle_max = 720.0
 scale_max = 1.5
+scale_curve = SubResource("CurveTexture_mio73")
 color = Color(1, 0.364706, 0, 1)
 color_ramp = SubResource("GradientTexture1D_4hqud")
 
@@ -90,7 +99,9 @@ mesh = SubResource("CapsuleMesh_qdg12")
 [node name="OmniLight3D" type="OmniLight3D" parent="MeshInstance3D"]
 light_color = Color(1, 0, 0, 1)
 light_energy = 9.0
-omni_range = 23.526
+shadow_enabled = true
+shadow_blur = 3.109
+omni_range = 35.0
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.998041, 0, 0, 0, 0.998041, 0, 0, 0, 1.18549, 0, 0, 0.170439)

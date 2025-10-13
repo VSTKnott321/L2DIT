@@ -125,16 +125,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -168.263, -26.8527, -145.717)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00330877, -0.00430179, -64.1085)
 
 [node name="barrel" parent="." instance=ExtResource("9_6iofu")]
-transform = Transform3D(0.79468, 0, 0, 0, 0.670415, 0, 0, 0, 0.78732, 83.8305, 0, -70.4775)
+transform = Transform3D(0.79468, 0, 0, 0, 0.670415, 0, 0, 0, 0.78732, 83.8305, -0.332831, -70.4775)
 
 [node name="barrel2" parent="." instance=ExtResource("9_6iofu")]
-transform = Transform3D(0.79468, 0, 0, 0, 0.670415, 0, 0, 0, 0.78732, 83.8305, 0, -65.0118)
+transform = Transform3D(0.79468, 0, 0, 0, 0.670415, 0, 0, 0, 0.78732, 83.8305, -0.332831, -65.0118)
 
 [node name="barrel3" parent="." instance=ExtResource("9_6iofu")]
-transform = Transform3D(0.79468, 0, 0, 0, 0.670415, 0, 0, 0, 0.78732, 83.8305, 0, -74.6895)
+transform = Transform3D(0.79468, 0, 0, 0, 0.670415, 0, 0, 0, 0.78732, 83.8305, -0.332831, -74.6895)
 
 [node name="barrel4" parent="." instance=ExtResource("9_6iofu")]
-transform = Transform3D(0.79468, 0, 0, 0, 0.670415, 0, 0, 0, 0.78732, 83.8305, 0, -79.9624)
+transform = Transform3D(0.79468, 0, 0, 0, 0.670415, 0, 0, 0, 0.78732, 83.8305, -0.332831, -79.9624)
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -601.96, 288.873, 419.057)
